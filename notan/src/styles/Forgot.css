@@ -1,0 +1,136 @@
+.forgotpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-light-gray);
+}
+
+.forgotpage_container_inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.forgotpage_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+}
+
+.forgotpage_container_inner_top {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--color-dark-text);
+}
+
+.forgotpage_container_inner_top h2 {
+  text-align: left;
+  width: 100%;
+}
+
+.forgotpage_container_inner_top_logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.forgotpage_container_inner_top_logo img {
+  width: 25px;
+}
+
+.forgotpage_container_inner_mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.forgotpage_container_inner_mid form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.forgotpage_container_inner_mid button {
+  width: 100%;
+  border: none;
+  background-color: var(--color-light-blue);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 15px 0px 15px 0px;
+  cursor: pointer;
+}
+.forgotpage_container_inner_mid button:hover {
+  background-color: var(--color-blue);
+}
+.forgotpage_container_inner_mid form section input:focus {
+  border-color: var(--color-light-blue);
+}
+.forgotpage_container_inner_mid form section p span {
+  font-size: 12px;
+}
+
+.forgotpage_container_inner_mid form section p {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+  text-align: left;
+  color: var(--color-red);
+  font-size: 12px;
+  font-weight: 300;
+  width: 100%;
+}
+
+.forgotpage_container_inner_mid form section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.forgotpage_container_inner_mid form section label {
+  text-align: left;
+  width: 100%;
+  font-weight: 500;
+}
+
+.forgotpage_container_inner_mid form section input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+  border: 1px solid var(--color-gray);
+  box-sizing: border-box;
+}
+
+.forgotpage_container_inner_mid a {
+  color: var(--color-light-blue);
+  text-decoration: none;
+}
+
+.forgotpage_container_inner_mid a:hover {
+  text-decoration: underline;
+}

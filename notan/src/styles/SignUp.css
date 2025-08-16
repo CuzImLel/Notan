@@ -1,0 +1,166 @@
+.signuppage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-light-gray);
+  overflow: hidden;
+}
+
+.signuppage_container_inner {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.signuppage_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  padding: 20px;
+}
+
+.signuppage_container_inner_top {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--color-dark-text);
+}
+
+.signuppage_container_inner_top h2 {
+  text-align: left;
+  width: 100%;
+}
+
+.signuppage_container_inner_top_logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.signuppage_container_inner_top_logo img {
+  width: 25px;
+}
+
+.signuppage_container_inner_top_login_referation {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+.signuppage_container_inner_top_login_referation p {
+  color: gray;
+}
+
+.signuppage_container_inner_top_login_referation a {
+  color: var(--color-light-blue);
+  text-decoration: none;
+}
+
+.signuppage_container_password_section_top a {
+  color: var(--color-light-blue);
+  text-decoration: none;
+}
+
+.signuppage_container_password_section_top a:hover {
+  text-decoration: underline;
+}
+.signuppage_container_inner_top_login_referation a:hover {
+  text-decoration: underline;
+}
+
+.signuppage_container_inner_mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.signuppage_container_inner_mid form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.signuppage_container_inner_mid form section {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.signuppage_container_password_section_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signuppage_container_inner_mid form section label {
+  text-align: left;
+  width: 100%;
+  font-weight: 500;
+}
+
+.signuppage_container_inner_mid form section input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+  outline: none;
+  border: 1px solid var(--color-gray);
+  box-sizing: border-box;
+}
+
+.signuppage_container_inner_mid form section p span {
+  font-size: 12px;
+}
+
+.signuppage_container_inner_mid form section p {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+  text-align: left;
+  color: var(--color-red);
+  font-size: 12px;
+  font-weight: 300;
+  width: 100%;
+}
+
+.signuppage_container_inner_mid button {
+  width: 100%;
+  border: none;
+  background-color: var(--color-light-blue);
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 15px 0px 15px 0px;
+  cursor: pointer;
+}
+.signuppage_container_inner_mid button:hover {
+  background-color: var(--color-blue);
+}
+.signuppage_container_inner_mid form section input:focus {
+  border-color: var(--color-light-blue);
+}

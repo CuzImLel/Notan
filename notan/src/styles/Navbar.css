@@ -1,0 +1,112 @@
+.navigationbar_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.navigationbar_inner_container {
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.navigationbar_left_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.navigationbar_left_container img {
+  height: 40px;
+}
+
+.navigationbar_left_container h1 {
+  color: var(--color-dark-text);
+}
+
+.navigationbar_mid_container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.navigationbar_mid_container ul li:hover {
+  background-color: var(--color-light-gray);
+  color: var(--color-blue);
+  transition: 0.3s;
+}
+
+.navigationbar_mid_container ul li {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 10px;
+}
+.navigationbar_mid_container ul li p {
+  font-size: large;
+}
+
+.navigationbar_right_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigationbar_right_container a {
+  text-decoration: none;
+  border: 1px solid transparent;
+  color: var(--color-dark-text);
+  padding: 10px;
+  background-color: var(--color-light-gray);
+  border-radius: 10px;
+}
+
+.navigationbar_right_container a:hover {
+  border-color: var(--color-gray);
+  transition: 0.3s;
+}
+
+.navigationbar_loginbutton {
+  outline: none;
+  border: 1px solid var(--color-gray);
+  padding: 10px 20px 10px 20px;
+  background-color: transparent;
+  border-radius: 7px;
+  color: var(--color-dark-text);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.navigationbar_signupbutton {
+  outline: none;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  font-weight: 600;
+  background-color: var(--color-light-blue);
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.navigationbar_signupbutton:hover {
+  background-color: var(--color-blue);
+  transition: 0.5s;
+}
+
+.navigationbar_loginbutton:hover {
+  background-color: var(--color-light-gray);
+  transition: 0.5s;
+}

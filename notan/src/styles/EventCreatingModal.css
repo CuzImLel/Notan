@@ -1,0 +1,218 @@
+.event_creation_modal {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.event_creation_modal_box_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.event_creation_modal_box {
+  max-width: 375px;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.event_creation_modal_box_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.event_creation_modal_box_top h1 {
+  color: var(--color-dark-text);
+}
+.event_creation_modal_box_top span {
+  color: var(--color-gray);
+  cursor: pointer;
+  user-select: none;
+}
+
+.event_creation_modal_box_top span:hover {
+  color: black;
+}
+
+.event_creation_modal_box_mid,
+.event_creation_modal_box_mid form,
+.event_creation_modal_box_mid form ul,
+.event_creation_modal_box_mid form ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.event_creation_modal_box_mid {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.event_creation_modal_box_mid p {
+  color: var(--color-gray);
+  font-weight: 500;
+}
+
+.event_creation_modal_box_mid_eventname_input,
+.event_creation_modal_box_mid_eventdescription_input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--color-gray);
+}
+
+.event_creation_modal_box_mid form ul {
+  list-style: none;
+  gap: 20px;
+}
+
+.event_creation_modal_box_mid form ul li {
+  gap: 10px;
+}
+.event_creation_modal_box_mid_timeslot_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+.event_creation_modal_box_mid_timeslot_section_start,
+.event_creation_modal_box_mid_timeslot_section_end {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  flex: 1;
+}
+
+.event_creation_modal_box_mid_priorities,
+.event_creation_modal_box_mid_states {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.event_creation_modal_box_mid_priorities div,
+.event_creation_modal_box_mid_states div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  user-select: none;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+.event_creation_modal_unselected {
+  background-color: transparent;
+}
+
+.event_creation_modal_selected {
+  background-color: rgba(0, 110, 255, 0.068);
+}
+
+.event_creation_modal_selected span {
+  display: flex;
+}
+
+.event_creation_modal_unselected span {
+  opacity: 0;
+}
+
+.event_creation_modal_box_mid_priorities span,
+.event_creation_modal_box_mid_states span {
+  color: var(--color-light-gray);
+  border-radius: 50%;
+  font-size: 15px;
+  background-color: var(--color-light-green);
+
+  align-items: center;
+  justify-content: center;
+}
+
+.event_creation_modal_box_bottom {
+  width: 100%;
+}
+
+.event_creation_modal_create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-light-blue);
+  padding: 10px 20px 10px 20px;
+  color: var(--color-light-gray);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event_creation_modal_create:hover {
+  opacity: 0.9;
+}
+
+.event_creation_modal_box_mid_timeslot_section input {
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid var(--color-gray);
+}
+
+.event_creation_modal_box_mid_timeslot_section_start div,
+.event_creation_modal_box_mid_timeslot_section_end div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .event_creation_modal_box_top h1 {
+    font-size: 20px;
+  }
+  .event_creation_modal_box_mid p {
+    font-size: 10px;
+  }
+  .event_creation_modal_box_mid input,
+  .event_creation_modal_box_mid_timeslot_section input {
+    height: 10px;
+    font-size: 10px;
+  }
+}

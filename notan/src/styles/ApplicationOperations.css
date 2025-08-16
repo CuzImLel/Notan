@@ -1,0 +1,27 @@
+.operation_box_displays {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+}
+
+.operation_box {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  gap: 20px;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 1000px) {
+  .operation_box {
+    flex-wrap: wrap;
+  }
+  .operation_box_displays {
+    width: 100%;
+  }
+}

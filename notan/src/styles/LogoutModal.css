@@ -1,0 +1,89 @@
+.fullscreen_modal_logout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(240, 248, 255, 0.336);
+}
+.logout_modal {
+  max-width: 500px;
+  max-height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  user-select: none;
+  border: 2px solid var(--color-gray-borders);
+  padding: 10px;
+}
+
+.logout_modal p {
+  color: gray;
+}
+.logout_modal h1 {
+  color: var(--color-dark-text);
+}
+.logout_modal span {
+  background-color: var(--color-red);
+  border-radius: 50%;
+  padding: 15px;
+  color: var(--color-light-gray);
+  font-size: 30px;
+}
+
+.logout_modal_button_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.logout_modal_button_section button {
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.logout_modal_signout_button:hover {
+  border-color: var(--color-dark-text);
+}
+
+.logout_modal_cancel_button:hover {
+  opacity: 0.9;
+}
+
+.logout_modal_cancel_button {
+  color: var(--color-light-gray);
+  border: 1px solid var(--color-light-blue);
+  background-color: var(--color-light-blue);
+}
+
+.logout_modal_signout_button {
+  color: var(--color-dark-text);
+  border: 1px solid var(--color-gray-borders);
+  background-color: var(--color-light-gray);
+}
+
+@media (max-width: 768px) {
+  .logout_modal p {
+    font-size: 10px;
+  }
+  .logout_modal h1 {
+    font-size: 18px;
+  }
+
+  .logout_modal_button_section button {
+    font-size: 10px;
+  }
+
+  .logout_modal span {
+    font-size: 20px;
+  }
+}

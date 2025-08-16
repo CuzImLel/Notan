@@ -1,0 +1,143 @@
+.event_config_popup {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event_config_popup_box {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  gap: 20px;
+}
+
+.event_config_popup_box_mid {
+  width: 100%;
+  border-top: 1px solid var(--color-gray);
+  border-bottom: 1px solid var(--color-gray);
+  padding-bottom: 10px;
+}
+
+.event_config_popup_box_upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.event_config_popup_box_upper h1 {
+  color: var(--color-dark-text);
+}
+
+.event_config_popup_box_upper span {
+  cursor: pointer;
+  color: var(--color-gray);
+  user-select: none;
+}
+
+.event_config_popup_box_upper span:hover {
+  color: var(--color-gray);
+}
+
+.event_config_popup_box label {
+  font-weight: bold;
+  color: var(--color-dark-text);
+  display: block;
+  margin-top: 10px;
+}
+
+.event_config_popup_box input,
+.event_config_popup_box select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  color: var(--color-dark-text);
+  outline: none;
+  box-sizing: border-box;
+  border-width: 0px;
+}
+
+.event_config_popup_box_mid_input_box input:focus {
+  border-width: 0px 0px 1px 0px;
+}
+
+.event_config_popup_box_mid {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.event_config_popup_box_under {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.event_config_popup_box_under_delete_button {
+  background-color: var(--color-red);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event_config_popup_box_under_save_button_active {
+  background-color: var(--color-green);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event_config_popup_box_under_save_button {
+  background-color: var(--color-green);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.event_config_popup_box_mid_input_box {
+  width: 100%;
+}
+
+.event_config_popup_box_mid_input_box div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event_config_popup_box_mid_input_box div span {
+  cursor: pointer;
+  color: var(--color-gray);
+  user-select: none;
+}
+
+.event_config_popup_box_mid select {
+  width: 100%;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid var(--color-gray);
+  border-radius: 5px;
+  color: var(--color-dark-text);
+  cursor: pointer;
+}

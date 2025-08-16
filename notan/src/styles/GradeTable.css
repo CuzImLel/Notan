@@ -1,0 +1,157 @@
+.operations_grade_table_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 10px;
+}
+
+.operations_grade_table table {
+  border: 2px solid var(--color-light-gray);
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.operations_grade_table_box {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.operations_semester_selectbar {
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 2px solid var(--color-light-gray);
+  border-radius: 10px;
+  color: var(--color-dark-text);
+  cursor: pointer;
+  font-size: 15px;
+}
+.operations_grade_table {
+  min-width: 100%;
+  border: 2px solid var(--color-light-gray);
+  border-radius: 10px;
+  color: var(--color-dark-text);
+}
+
+.operations_grade_table_head {
+  background-color: var(--color-light-gray);
+}
+
+.operations_grade_table_th {
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.operations_grade_table_td {
+  padding: 10px;
+  border-top: 1px solid var(--color-light-gray);
+}
+
+.operations_grad_table_topbar_left {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.operations_semester_button_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.operations_semester_creation_button {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-blue);
+  border: none;
+  color: var(--color-light-gray);
+  padding: 8px;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+.operations_semester_remove_button {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-red);
+  border: none;
+  color: var(--color-light-gray);
+  padding: 8px;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.operations_semester_creation_button:hover {
+  opacity: 0.8;
+}
+
+.operations_semester_remove_button:hover {
+  opacity: 0.8;
+}
+
+.operations_grade_table_button_section {
+  display: flex;
+  gap: 20px;
+}
+
+.operations_add_subject_button {
+  padding: 10px;
+}
+
+.operations_add_subject_button {
+  background-color: var(--color-blue);
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: var(--color-light-gray);
+  padding: 10px;
+}
+
+.operations_add_subject_button:hover {
+  opacity: 0.8;
+}
+
+.operations_download_table_button {
+  padding: 10px;
+  background-color: var(--color-light-gray);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid var(--color-gray);
+  color: var(--color-dark-text);
+}
+
+.operations_download_table_button:hover {
+  background-color: white;
+}
+
+.operations_grade_table_topbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .operations_grade_table_th {
+    font-size: 2.5vw;
+  }
+  .operations_grade_table_td {
+    font-size: 2vw;
+  }
+  .operations_grade_table_button_section button {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,105 @@
+.calendar_box {
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Styling für alle Toolbar-Buttons */
+.rbc-btn-group {
+  border-radius: 8px;
+  background-color: #f3f3f3;
+}
+
+.rbc-toolbar button {
+  background-color: var(--color-light-gray);
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-weight: 550;
+}
+
+.rbc-toolbar button:hover {
+  background-color: #e0e0e0;
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #007bff;
+  color: white;
+}
+
+.rbc-event {
+  background-color: rgba(123, 123, 219, 0.301);
+  border: 1px solid transparent;
+  border-left: 5px solid rgba(123, 123, 219, 1);
+  padding: 10px;
+  font-size: 15px;
+  text-overflow: ellipsis;
+  -webkit-mask-image: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 1) 70%
+  );
+  mask-image: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 1) 70%
+  );
+  -webkit-mask-size: 300%;
+  mask-size: 300%;
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+}
+
+.rbc-event-content {
+  display: flex;
+  align-items: center;
+}
+
+.rbc-btn-group button.rbc-active {
+  background-color: var(--color-blue);
+}
+
+.rbc-event:hover {
+  cursor: pointer;
+  transition: mask-position 1s ease, -webkit-mask-position 1s ease;
+  -webkit-mask-position: 0% 0;
+  mask-position: 0% 0;
+  opacity: 1;
+  border-right: 1px solid rgba(123, 123, 219, 1);
+  border-top: 1px solid rgba(123, 123, 219, 1);
+  border-bottom: 1px solid rgba(123, 123, 219, 1);
+}
+
+.calendar_event_box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.calendar_event_top p {
+  color: rgba(123, 123, 219, 1);
+  font-weight: 500;
+}
+
+.calendar_event_bottom h5 {
+  font-weight: 400;
+  color: rgba(123, 123, 219, 1);
+}
+
+@media (max-width: 500px) {
+  .rbc-calendar * {
+    font-size: 10px;
+  }
+
+  .rbc-btn-group button {
+    padding: 10px;
+  }
+
+  .rbc-toolbar {
+    gap: 10px;
+  }
+}

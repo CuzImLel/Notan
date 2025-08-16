@@ -1,0 +1,37 @@
+.gpa_box {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid var(--color-light-gray);
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.gpa_box p {
+  color: var(--color-dark-text);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.gpa_box h1 {
+  color: var(--color-blue);
+  font-size: 70px;
+  font-weight: 500;
+}
+@media screen and (max-width: 800px) {
+  .gpa_box {
+    width: 100%;
+    height: 200px;
+  }
+  .gpa_box p {
+    font-size: 15px;
+  }
+  .gpa_box h1 {
+    font-size: 50px;
+  }
+}

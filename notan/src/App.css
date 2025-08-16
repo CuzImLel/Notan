@@ -1,0 +1,46 @@
+:root {
+  --color-dark-background: #1d1d24;
+  --color-light-blue: #5190ef;
+  --color-dark-text: #202128;
+  --color-gray: #3c4458;
+  --color-gray-borders: #e0e0e0;
+  --color-light-gray: #f5f5f5;
+  --color-blue: #3c7bda;
+  --color-red: rgb(255, 82, 82);
+  --color-light-green: rgba(0, 255, 0, 0.404);
+  --color-green: rgba(63, 209, 63, 0.877);
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  background-color: var(--color-light-gray);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+}
+
+.application_container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.application_content_container {
+  width: 100%;
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+* {
+  scrollbar-width: thin;
+}
