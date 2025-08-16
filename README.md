@@ -4,7 +4,7 @@ built by JustDxniel with TypeScript, React, MongoDB and <3
 
 scalable web application for students -> (still under development)
 
-
+Attached files:
 
 <img width="1914" height="953" alt="image6" src="https://github.com/user-attachments/assets/9fbe0210-625f-49a2-96f7-af33fd20dbbf" />
 <img width="1917" height="947" alt="image2" src="https://github.com/user-attachments/assets/9af995bd-199b-4e2b-b0d2-a12f5e2d7e37" />
