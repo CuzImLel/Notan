@@ -1,0 +1,46 @@
+.gradetable_empty_workspace {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gradetable_empty_workspace h1 {
+  color: var(--color-gray);
+}
+
+.gradetable_empty_workspace p {
+  color: var(--color-gray);
+  text-align: center;
+}
+
+.gradetable_empty_workspace button {
+  color: white;
+  background-color: var(--color-blue);
+  outline: none;
+  border: none;
+  padding: 12px 25px 12px 25px;
+  font-size: 15px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.gradetable_empty_workspace button:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 500px) {
+  .gradetable_empty_workspace h1 {
+    font-size: 20px;
+  }
+  .gradetable_empty_workspace p {
+    font-size: 12px;
+  }
+  .gradetable_empty_workspace button {
+    font-size: 10px;
+  }
+}

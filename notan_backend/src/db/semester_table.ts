@@ -1,8 +1,10 @@
 import mongoose from "mongoose";
 import { GradeCalculationPiece } from "types/GradeCalculationPiece";
+import { SemesterTableType } from "types/SemesterTable";
 
 const SemesterTableSchema = new mongoose.Schema({
   userid: { type: String, required: true },
+  table: { type: String, required: true },
   content: {
     type: [
       {
@@ -31,5 +33,5 @@ export const deleteSemesterTable = (id: string) =>
   SemesterTable.findOneAndDelete({ _id: id });
 export const updateSemesterTableByID = (
   id: string,
-  values: Record<string, any>
-) => SemesterTable.findByIdAndUpdate({ id, values });
+  values: SemesterTableType
+) => SemesterTable.findByIdAndUpdate(id, values);

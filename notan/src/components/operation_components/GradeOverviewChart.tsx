@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import {
   BarChart,
   Bar,
@@ -9,17 +9,32 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
+import { SemesterTable } from "../../utils/SemesterTable";
 
-interface props {}
+interface props {
+  selectedSemester: SemesterTable | undefined;
+}
 
-const data = [
-  { grade: "1", amount: 4 },
-  { grade: "2", amount: 3 },
-  { grade: "3", amount: 2 },
-  { grade: "4", amount: 1 },
-];
+const GradeOverviewChart: React.FC<props> = ({ selectedSemester }) => {
+  const data = useMemo(() => {
+    if (!selectedSemester) return [];
 
-const GradeOverviewChart: React.FC = () => {
+    const counts: Record<string, number> = {};
+
+    selectedSemester.content.forEach((item) => {
+      if (item.grade !== undefined && item.grade !== null) {
+        const rounded = Math.round(item.grade);
+        counts[rounded] = (counts[rounded] || 0) + 1;
+      }
+    });
+
+    const grades = [1, 2, 3, 4, 5];
+    return grades.map((g) => ({
+      grade: g.toString(),
+      amount: counts[g] || 0,
+    }));
+  }, [selectedSemester]);
+
   return (
     <div
       className="grade_overview_chart_box"

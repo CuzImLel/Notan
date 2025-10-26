@@ -1,0 +1,72 @@
+.semester_deletion_modal {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.semester_deletion_modal_box {
+  max-width: 375px;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.semester_deletion_modal_box_top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.semester_deletion_modal_box_top h1 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.semester_deletion_modal_box_bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.semester_deletion_modal_box_bottom button {
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--color-light-gray);
+  border: none;
+  width: 40%;
+  cursor: pointer;
+}
+
+.semester_creation_modal_return {
+  background-color: var(--color-gray);
+}
+
+.semester_deletion_modal_delete {
+  background-color: var(--color-red);
+}
+
+.semester_deletion_modal_box_bottom button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .semester_deletion_modal_box_top h1 {
+    font-size: 18px;
+  }
+}

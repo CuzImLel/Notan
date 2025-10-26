@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import UserData from "../utils/UserData";
 import Menu from "../utils/Menu";
 import logo from "../assets/images/calendar.png";
-import LogoutModal from "./LogoutModal";
+import LogoutModal from "./modals/LogoutModal";
 
 interface props {
   menu: Menu;
@@ -95,6 +95,28 @@ const ApplicationSidebar: React.FC<props> = ({
                   >
                     <span className="material-symbols-rounded">functions</span>
                     <p className="sidebar_list_item_text">Operations</p>
+                  </div>
+                </li>
+              </div>
+              <div>
+                <li
+                  className={
+                    menu === Menu.SESSION
+                      ? "sidebar_list_item_selected"
+                      : "sidebar_list_item_unselected"
+                  }
+                  onClick={() => setMenu(Menu.SESSION)}
+                >
+                  <div
+                    className="sidebar_item_content"
+                    id={
+                      menu === Menu.SESSION
+                        ? "sidebar_selected"
+                        : "sidebar_unselected"
+                    }
+                  >
+                    <span className="material-symbols-rounded">book_2</span>
+                    <p className="sidebar_list_item_text">Session</p>
                   </div>
                 </li>
               </div>

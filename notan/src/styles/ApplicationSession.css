@@ -1,0 +1,203 @@
+.application_session_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.8s ease-out forwards;
+  user-select: none;
+}
+
+.application_session_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid var(--color-blue);
+  border-radius: 50%;
+  width: 600px;
+  height: 600px;
+}
+
+.application_session_top {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.application_session_top h1 {
+  font-size: 50px;
+  color: var(--color-gray);
+}
+
+.application_session_mid {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.application_session_mid h1 {
+  color: var(--color-blue);
+  font-size: 100px;
+}
+
+.application_session_bottom {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.application_session_bottom button {
+  font-size: 20px;
+  width: 100px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.session_stop_button {
+  background-color: var(--color-red);
+  border-radius: 5px;
+  color: white;
+  border-width: 1px;
+  border-color: transparent;
+}
+
+.session_start_button {
+  background-color: var(--color-blue);
+  border-radius: 5px;
+  color: white;
+  border-width: 1px;
+  border-color: transparent;
+}
+.session_settings_button {
+  background-color: white;
+  border-radius: 5px;
+  color: var(--color-gray);
+  border-width: 1px;
+}
+.session_reset_button {
+  background-color: white;
+  border-radius: 5px;
+  color: var(--color-gray);
+  border-width: 1px;
+}
+
+.session_settings_button:hover,
+.session_reset_button:hover {
+  background-color: var(--color-light-gray);
+  color: var(--color-dark-text);
+}
+
+.session_start_button:hover {
+  opacity: 0.8;
+}
+
+#bar1 {
+  animation: bar1 1.2s infinite linear;
+}
+
+#bar2 {
+  animation: bar2 0.8s infinite linear;
+}
+
+#bar3 {
+  animation: bar3 1s infinite linear;
+}
+
+#bar4 {
+  animation: bar4 0.7s infinite linear;
+}
+
+@keyframes bar1 {
+  0% {
+    height: 2px;
+  }
+  50% {
+    height: 7px;
+  }
+  100% {
+    height: 2px;
+  }
+}
+
+@keyframes bar2 {
+  0% {
+    height: 5px;
+  }
+  40% {
+    height: 1px;
+  }
+  80% {
+    height: 7px;
+  }
+  100% {
+    height: 5px;
+  }
+}
+
+@keyframes bar3 {
+  0% {
+    height: 7px;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 7px;
+  }
+}
+
+@keyframes bar4 {
+  0% {
+    height: 2px;
+  }
+  50% {
+    height: 7px;
+  }
+  100% {
+    height: 2px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .application_session_top h1 {
+    font-size: 30px;
+  }
+
+  .application_session_mid {
+    padding: 10px;
+  }
+
+  .application_session_bottom button {
+    font-size: 10px;
+    width: 60px;
+  }
+
+  .application_session_mid h1 {
+    font-size: 60px;
+  }
+
+  .application_session_box {
+    max-width: 300px;
+    max-height: 300px;
+    border: none;
+  }
+}

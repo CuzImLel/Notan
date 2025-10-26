@@ -18,6 +18,14 @@ import "./styles/ApplicationOperations.css";
 import "./styles/GPAbox.css";
 import "./styles/GradeOverviewChart.css";
 import "./styles/GradeTable.css";
+import "./styles/SemesterCreationModal.css";
+import "./styles/SemesterDeletionModal.css";
+import "./styles/SemesterSubjectCreationModal.css";
+import "./styles/GradeTableEmptyWorkspace.css";
+import "./styles/ApplicationSession.css";
+import "./styles/PomodoroTimerPreferences.css";
+import "./styles/ToggleSwitch.css";
+import "./styles/NumberSelector.css";
 import "./App.css";
 
 createRoot(document.getElementById("root")!).render(

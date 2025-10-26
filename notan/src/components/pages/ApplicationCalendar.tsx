@@ -9,7 +9,7 @@ import WeekEventComponent from "../event_components/WeekEventComponent";
 import DayEventComponent from "../event_components/DayEventComponent";
 import AgendaEventComponent from "../event_components/AgendaEventCalendar";
 import ApplicationEventCard from "../ApplicationEventCard";
-import EventCreatingModal from "../EventCreatingModal";
+import EventCreatingModal from "../modals/EventCreatingModal";
 
 const locales = { de: de };
 

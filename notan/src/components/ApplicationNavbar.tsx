@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import UserData from "../utils/UserData";
 import logo from "../assets/images/calendar.png";
 import Menu from "../utils/Menu";
-import EventCreatingModal from "./EventCreatingModal";
+import EventCreatingModal from "./modals/EventCreatingModal";
 
 interface props {
   user: UserData;

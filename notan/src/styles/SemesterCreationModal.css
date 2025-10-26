@@ -1,0 +1,91 @@
+.semester_creation_modal {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.semester_creation_modal_box_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.semester_creation_modal_box {
+  max-width: 375px;
+  width: 60%;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid var(--color-gray);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.semester_creation_modal_box_top span {
+  cursor: pointer;
+  user-select: none;
+}
+
+.semester_creation_modal_box_top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.semester_creation_modal_box_mid {
+  width: 100%;
+}
+
+.semester_creation_modal_box_mid input {
+  width: 100%;
+  font-size: 13px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: var(--color-dark-text);
+  border: none;
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.semester_creation_modal_box_mid input:focus {
+  border-color: transparent;
+  border-radius: 5px;
+}
+
+.semester_creation_modal_create,
+.semester_creation_modal_box_bottom {
+  width: 100%;
+}
+
+.semester_creation_modal_create {
+  padding: 10px;
+  background-color: var(--color-light-blue);
+  border-radius: 5px;
+  color: var(--color-light-gray);
+  border: none;
+  cursor: pointer;
+}
+
+.semester_creation_modal_create:hover {
+  background-color: var(--color-blue);
+}
+
+.semester_creation_modal_box_top h1 {
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .semester_creation_modal_box_top h1 {
+    font-size: 18px;
+  }
+}

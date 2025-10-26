@@ -6,6 +6,7 @@
   height: 100%;
   position: absolute;
   background-color: rgba(240, 248, 255, 0.336);
+  z-index: 10;
 }
 .logout_modal {
   max-width: 500px;

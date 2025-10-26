@@ -4,9 +4,10 @@ import {
   createSemesterTable,
   deleteSemesterTable,
   updateSemesterTableByID,
+  SemesterTable,
 } from "../db/semester_table";
 import express from "express";
-import { SemesterTable } from "types/SemesterTable";
+import { SemesterTableType } from "types/SemesterTable";
 
 export const getAllSemesterTables = async (
   req: express.Request,
@@ -40,7 +41,7 @@ export const addSemesterTable = async (
   res: express.Response
 ) => {
   try {
-    const tableData = req.body as SemesterTable;
+    const tableData = req.body as SemesterTableType;
 
     const table = await createSemesterTable(tableData);
 
@@ -65,6 +66,7 @@ export const removeSemesterTable = async (
 
     res.status(200).json({
       message: "SemesterTable removed successfully",
+      table,
     });
   } catch (error) {
     console.log(error);
@@ -79,11 +81,11 @@ export const updateSemesterTable = async (
   try {
     const { data } = req.body;
 
-    const table = await updateSemesterTableByID(data._id, data);
-    await table.save();
+    const updatedTable = await updateSemesterTableByID(data._id, data);
+    await updatedTable.save();
     res.status(200).json({
-      message: "Table updated successfully",
-      table,
+      message: "SemesterTable updated successfully",
+      updatedTable,
     });
   } catch (error) {
     console.log(error);

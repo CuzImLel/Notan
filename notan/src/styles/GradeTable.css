@@ -12,12 +12,14 @@
   border-radius: 20px;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .operations_grade_table_box {
   height: 100%;
   width: 100%;
   overflow-y: auto;
+  overflow: hidden;
 }
 
 .operations_semester_selectbar {
@@ -34,6 +36,7 @@
   border: 2px solid var(--color-light-gray);
   border-radius: 10px;
   color: var(--color-dark-text);
+  overflow: hidden;
 }
 
 .operations_grade_table_head {
@@ -144,14 +147,53 @@
   gap: 10px;
 }
 
+.operations_grade_table_th {
+}
+
+.operations_grade_table_content_button_section {
+  display: flex;
+  gap: 10px;
+}
+
+.operations_grade_table_content_button_section button {
+  display: flex;
+  justify-content: center;
+  color: var(--color-light-gray);
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  border: none;
+}
+
+.operations_grade_table_content_button_section button:hover {
+  opacity: 0.7;
+}
+
+.operations_grade_content_edit_button {
+  background-color: transparent;
+}
+
+.operations_grade_content_delete_button {
+  background-color: transparent;
+}
+
+.operations_grade_table_content_button_section button span {
+  font-size: 20px;
+  color: var(--color-dark-text);
+}
+
 @media screen and (max-width: 800px) {
   .operations_grade_table_th {
-    font-size: 2.5vw;
+    font-size: 2.4vw;
   }
   .operations_grade_table_td {
     font-size: 2vw;
   }
   .operations_grade_table_button_section button {
     font-size: 10px;
+  }
+
+  .operations_grade_table_content_button_section button span {
+    font-size: 12px;
   }
 }

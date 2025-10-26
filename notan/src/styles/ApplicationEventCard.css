@@ -1,6 +1,6 @@
 .event_config_popup {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.267);
+  background-color: rgba(0, 0, 0, 0.308);
   height: 100%;
   position: absolute;
   top: 0;
@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .event_config_popup_box {
@@ -39,7 +40,7 @@
 }
 
 .event_config_popup_box_upper h1 {
-  color: var(--color-dark-text);
+  color: var(--color-gray);
 }
 
 .event_config_popup_box_upper span {
@@ -54,7 +55,7 @@
 
 .event_config_popup_box label {
   font-weight: bold;
-  color: var(--color-dark-text);
+  color: var(--color-gray);
   display: block;
   margin-top: 10px;
 }

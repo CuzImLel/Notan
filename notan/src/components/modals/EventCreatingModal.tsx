@@ -1,8 +1,8 @@
 import React, { ButtonHTMLAttributes, useState } from "react";
-import { Priority } from "../utils/Priority";
-import { State } from "../utils/State";
+import { Priority } from "../../utils/Priority";
+import { State } from "../../utils/State";
 import axios from "axios";
-import UserData from "../utils/UserData";
+import UserData from "../../utils/UserData";
 
 interface props {
   user: UserData;

@@ -1,0 +1,154 @@
+.pomodoro_timer_preferences_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(43, 45, 46, 0.274);
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.pomodoro_timer_preferences_box {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 300px;
+  height: auto;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.pomodoro_timer_preferences_top span {
+  cursor: pointer;
+}
+
+.pomodoro_timer_preferences_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--color-dark-text);
+}
+
+.pomodoro_timer_preferences_volume_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  color: var(--color-gray);
+}
+
+.pomodoro_timer_preferences_checkbox_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pomodoro_timer_preferences_checkbox_container div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.pomodoro_timer_preferences_checkbox_container div input {
+  background-color: var(--color-light-blue);
+}
+
+.pomodoro_timer_preferences_volume {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pomodoro_timer_preferences_volume input {
+  width: 100%;
+}
+
+.pomodoro_timer_preferences_volume h1 {
+  color: var(--color-dark-text);
+  font-size: 20px;
+}
+
+.pomodoro_timer_preferences_buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.pomodoro_timer_preferences_buttons button {
+  width: 50%;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.pomodoro_timer_preferences_setTimer {
+  background-color: var(--color-light-blue);
+  color: white;
+  border-color: transparent;
+}
+.pomodoro_timer_preferences_reset {
+  background-color: transparent;
+  border: 1px solid var(--color-dark-text);
+}
+
+.pomodoro_timer_preferences_time {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pomodoro_timer_preferences_time h1 {
+  color: var(--color-dark-text);
+  font-size: 20px;
+}
+
+.pomodoro_timer_preferences_reset:hover {
+  background-color: var(--color-light-gray);
+}
+
+.pomodoro_timer_preferences_setTimer:hover {
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 700px) {
+  .pomodoro_timer_preferences_box {
+    width: 250px;
+  }
+
+  .pomodoro_timer_preferences_buttons button {
+    font-size: 15px;
+  }
+
+  .pomodoro_timer_preferences_box p,
+  .pomodoro_timer_preferences_box label {
+    font-size: 12px;
+  }
+
+  .pomodoro_timer_preferences_top h1 {
+    font-size: 20px !important;
+  }
+
+  .pomodoro_timer_preferences_box div h1 {
+    font-size: 15px;
+  }
+
+  .pomodoro_timer_preferences_box .switch {
+    width: 40px;
+    height: 20px;
+  }
+  .pomodoro_timer_preferences_box .slider:before {
+    width: 14px;
+    height: 14px;
+    left: 2px;
+    bottom: 3px;
+  }
+}

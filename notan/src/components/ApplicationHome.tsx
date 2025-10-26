@@ -8,8 +8,10 @@ import { Priority } from "../utils/Priority";
 import { State } from "../utils/State";
 import axios from "axios";
 import { parseEventsToObjects } from "../utils/helpers/EventHandler";
-import EventCreatingModal from "./EventCreatingModal";
+import EventCreatingModal from "./modals/EventCreatingModal";
 import { GradeCalculationPiece } from "../utils/GradeCalculationPiece";
+import { SemesterTable } from "../utils/SemesterTable";
+import { fetchEvents, fetchSemesterTables } from "../utils/helpers/ApiUtils";
 
 interface props {
   data: { _id: string; email: string; username: string } | null;
@@ -19,31 +21,19 @@ interface props {
 const ApplicationHome: React.FC<props> = ({ data, setLogin }) => {
   const [menu, setMenu] = useState<Menu>(Menu.DASHBOARD);
   const [events, setEvents] = useState<CalendarEvent[]>([]);
-  const [gradeData, setGradeData] = useState<GradeCalculationPiece[]>([]);
-
-  const fetchEvents = () => {
-    axios
-      .get("http://localhost:8080/events", {
-        params: { userid: data?._id },
-      })
-      .then((res) => {
-        setEvents(parseEventsToObjects(res));
-        console.log("Successfully pulled all events:", res.data);
-      })
-      .catch((err) => {
-        console.error(
-          "An error occured while trying to fetch all events:",
-          err.message
-        );
-      });
-  };
+  const [semesterTables, setSemesterTables] = useState<SemesterTable[]>([]);
 
   const refreshEvents = () => {
-    fetchEvents();
+    fetchEvents(data?._id, setEvents);
+  };
+
+  const refreshSemesterTables = () => {
+    fetchSemesterTables(data?._id, setSemesterTables);
   };
 
   useEffect(() => {
-    fetchEvents();
+    refreshEvents();
+    refreshSemesterTables();
   }, []);
 
   return (
@@ -67,7 +57,10 @@ const ApplicationHome: React.FC<props> = ({ data, setLogin }) => {
               <ApplicationWorkspace
                 menu={menu}
                 events={events}
+                semesterTables={semesterTables}
                 refreshEventData={refreshEvents}
+                refreshSemesterTableData={refreshSemesterTables}
+                userid={data._id}
               ></ApplicationWorkspace>
             </section>
           </div>
