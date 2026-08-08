@@ -1,0 +1,104 @@
+.application_flashcards_deck_menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 0;
+  height: 100%;
+  padding: 24px;
+  gap: 20px;
+}
+
+.application_flashcards_deck_menu_title {
+  color: var(--color-dark-text);
+  font-size: 25px;
+}
+
+.application_flashcards_deck_menu_toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+
+.application_flashcards_deck_menu_return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  background-color: var(--color-red);
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.application_flashcards_deck_menu_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.application_flashcards_deck_menu_return:hover,
+.application_flashcards_deck_menu_add:hover {
+  opacity: 0.9;
+}
+
+.application_flashcards_deck_menu_add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 10px 20px;
+  background-color: var(--color-blue);
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.application_flashcards_deck_menu_cardsection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-content: start;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  gap: 18px;
+  padding: 20px 2px 28px;
+  overflow-y: auto;
+  border-top: 1px solid var(--color-gray-borders);
+}
+@media screen and (max-width: 600px) {
+  .application_flashcards_deck_menu {
+    padding: 16px;
+  }
+
+  .application_flashcards_deck_menu_title {
+    font-size: 21px;
+  }
+
+  .application_flashcards_deck_menu_buttons {
+    gap: 10px;
+  }
+
+  .application_flashcards_deck_menu_cardsection {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding-top: 16px;
+  }
+
+  .application_flashcards_deck_menu_add,
+  .application_flashcards_deck_menu_return {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .application_flashcards_deck_menu_add::before {
+    content: "+";
+    font-size: 30px;
+  }
+}

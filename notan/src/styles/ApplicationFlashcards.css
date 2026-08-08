@@ -1,0 +1,68 @@
+.application_flashcards {
+  height: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.application_flashcards_card_section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.flashcards_operation_bar {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.flashcards_operation_bar_stats,
+.flashcards_operation_bar_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  user-select: none;
+}
+.flashcards_operation_bar_stats p {
+  border: 1px solid var(--color-blue);
+  background-color: rgba(3, 112, 255, 0.089);
+  border-radius: 20px;
+  padding: 12px;
+  color: var(--color-blue);
+  cursor: pointer;
+}
+
+.flashcards_operation_bar_buttons button:hover {
+  opacity: 0.9;
+}
+
+.flashcards_operation_bar_import_deck:hover {
+  background-color: white;
+  color: var(--color-gray);
+}
+
+.flashcards_operation_bar_buttons button {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid transparent;
+  padding: 12px;
+  font-size: 15px;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.flashcards_operation_bar_add_deck {
+  color: var(--color-light-gray);
+  background-color: var(--color-blue);
+}

@@ -3,17 +3,27 @@ import CalendarComponent from "./pages/ApplicationCalendar";
 import Menu from "../utils/Menu";
 import { CalendarEvent } from "../utils/Event";
 import ApplicationOperations from "./pages/ApplicationOperations";
-import ApplicationSchedule from "./pages/ApplicationSchedule";
+import ApplicationFlashcards from "./pages/ApplicationFlashcards";
 import { SemesterTable } from "../utils/SemesterTable";
 import ApplicationSession from "./pages/ApplicationSession";
+import { Deck } from "../utils/Deck";
+import ApplicationHelp from "./pages/ApplicationHelp";
+import ApplicationSettings from "./pages/ApplicationSettings";
+import UserData from "../utils/UserData";
+import ApplicationDashboard from "./pages/ApplicationDashboard";
 
 interface props {
   menu: Menu;
   events: CalendarEvent[];
   semesterTables: SemesterTable[];
+  decks: Deck[];
   refreshEventData: () => void;
   refreshSemesterTableData: () => void;
+  refreshDeckData: () => void;
   userid: string;
+  user: UserData;
+  onUserUpdated: (user: UserData) => void;
+  setMenu: (menu: Menu) => void;
 }
 
 const ApplicationWorkspace: React.FC<props> = ({
@@ -22,7 +32,12 @@ const ApplicationWorkspace: React.FC<props> = ({
   semesterTables,
   refreshEventData,
   refreshSemesterTableData,
+  refreshDeckData,
   userid,
+  decks,
+  user,
+  onUserUpdated,
+  setMenu,
 }) => {
   return (
     <>
@@ -52,8 +67,30 @@ const ApplicationWorkspace: React.FC<props> = ({
             ""
           )}
 
-          {menu == Menu.SCHEDULE ? (
-            <ApplicationSchedule></ApplicationSchedule>
+          {menu == Menu.FLASHCARDS ? (
+            <ApplicationFlashcards
+              userid={userid}
+              decks={decks}
+              refreshDeckData={refreshDeckData}
+            ></ApplicationFlashcards>
+          ) : (
+            ""
+          )}
+          {menu == Menu.DASHBOARD ? (
+            <ApplicationDashboard
+              user={user}
+              events={events}
+              decks={decks}
+              semesterTables={semesterTables}
+              setMenu={setMenu}
+            />
+          ) : (
+            ""
+          )}
+
+          {menu == Menu.HELP ? <ApplicationHelp /> : ""}
+          {menu == Menu.SETTINGS ? (
+            <ApplicationSettings user={user} onUserUpdated={onUserUpdated} />
           ) : (
             ""
           )}

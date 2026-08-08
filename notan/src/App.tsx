@@ -54,7 +54,11 @@ const App: React.FC = () => {
           path="/"
           element={
             isLoggedIn && userdata != null ? (
-              <ApplicationHome data={userdata} setLogin={setLogin} />
+              <ApplicationHome
+                data={userdata}
+                setLogin={setLogin}
+                setUserData={setUserData}
+              />
             ) : (
               <Home />
             )

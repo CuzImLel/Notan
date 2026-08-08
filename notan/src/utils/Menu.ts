@@ -3,7 +3,7 @@ enum Menu {
   CALENDAR = "Calendar",
   GRADES = "Grades & Operations",
   SESSION = "Session",
-  SCHEDULE = "Schedule",
+  FLASHCARDS = "Flashcards",
   SETTINGS = "Application settings",
   HELP = "Help",
 }

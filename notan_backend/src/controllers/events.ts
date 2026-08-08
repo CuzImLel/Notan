@@ -9,7 +9,7 @@ import {
 import { CalendarEvent } from "../types/Event";
 export const getAllEvents = async (
   req: express.Request,
-  res: express.Response
+  res: express.Response,
 ) => {
   try {
     const events = await getEvents();
@@ -22,7 +22,7 @@ export const getAllEvents = async (
 
 export const getAllEventsByUserId = async (
   req: express.Request,
-  res: express.Response
+  res: express.Response,
 ) => {
   try {
     const { userid } = req.params;
@@ -36,7 +36,7 @@ export const getAllEventsByUserId = async (
 
 export const deleteEvent = async (
   req: express.Request,
-  res: express.Response
+  res: express.Response,
 ) => {
   try {
     const id = req.query.id as string;
@@ -50,12 +50,13 @@ export const deleteEvent = async (
 
 export const updateEvent = async (
   req: express.Request,
-  res: express.Response
+  res: express.Response,
 ) => {
   try {
     const { data } = req.body;
 
     const event = await updateEventByID(data._id, data);
+    if (event == null) return;
     await event.save();
     res.status(200).json({
       message: "Event updated successfully",
@@ -69,7 +70,7 @@ export const updateEvent = async (
 
 export const addEvent = async (
   req: express.Request,
-  res: express.Response
+  res: express.Response,
 ): Promise<void> => {
   try {
     const eventData = req.body as CalendarEvent;

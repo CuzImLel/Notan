@@ -4,28 +4,41 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background-color: rgba(43, 45, 46, 0.274);
-  z-index: 10;
+  position: fixed;
+  background-color: rgba(27, 35, 50, 0.38);
+  backdrop-filter: blur(5px);
+  z-index: 20;
   top: 0;
   left: 0;
 }
 
 .pomodoro_timer_preferences_box {
-  padding: 20px;
+  box-sizing: border-box;
+  padding: 26px;
   background-color: white;
-  border: 1px solid black;
-  border-radius: 20px;
-  width: 300px;
+  border: 1px solid rgba(81, 144, 239, 0.28);
+  border-radius: 18px;
+  width: min(390px, calc(100vw - 32px));
   height: auto;
   user-select: none;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 27px;
+  box-shadow: 0 24px 60px rgba(15, 26, 45, 0.25);
+  animation: pomodoroPreferencesIn 180ms ease-out;
 }
 
 .pomodoro_timer_preferences_top span {
   cursor: pointer;
+  padding: 5px;
+  border-radius: 8px;
+  color: var(--color-gray);
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.pomodoro_timer_preferences_top span:hover {
+  background: var(--color-light-gray);
+  color: var(--color-dark-text);
 }
 
 .pomodoro_timer_preferences_top {
@@ -33,6 +46,12 @@
   align-items: center;
   justify-content: space-between;
   color: var(--color-dark-text);
+}
+
+.pomodoro_timer_preferences_top h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  letter-spacing: -0.03em;
 }
 
 .pomodoro_timer_preferences_volume_bar {
@@ -46,13 +65,17 @@
 .pomodoro_timer_preferences_checkbox_container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
+  border-top: 1px solid var(--color-gray-borders);
 }
 .pomodoro_timer_preferences_checkbox_container div {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-gray-borders);
 }
 .pomodoro_timer_preferences_checkbox_container div input {
   background-color: var(--color-light-blue);
@@ -60,38 +83,41 @@
 
 .pomodoro_timer_preferences_volume {
   width: 100%;
-  gap: 20px;
+  gap: 13px;
   display: flex;
   flex-direction: column;
 }
 
 .pomodoro_timer_preferences_volume input {
   width: 100%;
+  accent-color: var(--color-blue);
 }
 
 .pomodoro_timer_preferences_volume h1 {
   color: var(--color-dark-text);
-  font-size: 20px;
+  font-size: 0.98rem;
 }
 
 .pomodoro_timer_preferences_buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .pomodoro_timer_preferences_buttons button {
   width: 50%;
-  height: 50px;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 10px;
+  height: 44px;
+  font-size: 0.92rem;
+  font-weight: 650;
+  border-radius: 9px;
   cursor: pointer;
+  transition: transform 160ms ease, background-color 160ms ease,
+    box-shadow 160ms ease, opacity 160ms ease;
 }
 
 .pomodoro_timer_preferences_setTimer {
-  background-color: var(--color-light-blue);
+  background-color: var(--color-blue);
   color: white;
   border-color: transparent;
 }
@@ -103,12 +129,12 @@
 .pomodoro_timer_preferences_time {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 13px;
 }
 
 .pomodoro_timer_preferences_time h1 {
   color: var(--color-dark-text);
-  font-size: 20px;
+  font-size: 0.98rem;
 }
 
 .pomodoro_timer_preferences_reset:hover {
@@ -117,15 +143,35 @@
 
 .pomodoro_timer_preferences_setTimer:hover {
   opacity: 0.9;
+  box-shadow: 0 7px 14px rgba(60, 123, 218, 0.22);
+}
+
+.pomodoro_timer_preferences_buttons button:hover {
+  transform: translateY(-1px);
+}
+
+.pomodoro_timer_preferences_buttons button:active {
+  transform: translateY(0);
+}
+
+@keyframes pomodoroPreferencesIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media screen and (max-width: 700px) {
   .pomodoro_timer_preferences_box {
-    width: 250px;
+    padding: 20px;
   }
 
   .pomodoro_timer_preferences_buttons button {
-    font-size: 15px;
+    font-size: 0.82rem;
   }
 
   .pomodoro_timer_preferences_box p,

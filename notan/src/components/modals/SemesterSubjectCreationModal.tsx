@@ -181,7 +181,7 @@ const SemesterSubjectCreationModel: React.FC<props> = ({
             className="semester_subject_creation_modal_create"
             onClick={handleSubmit}
           >
-            Add Subject
+            Add Subject*
           </button>
         </div>
       </div>

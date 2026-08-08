@@ -4,23 +4,20 @@ import { State } from "../../utils/State";
 import axios from "axios";
 import UserData from "../../utils/UserData";
 import { SemesterTable } from "../../utils/SemesterTable";
+import { Deck } from "../../utils/Deck";
 
 interface props {
   userid: string;
   closeModal: () => void;
-  semesterTables: SemesterTable[];
-  refreshSemesterTables: () => void;
-  setSelectedSemester: (table: SemesterTable) => void;
-  selectedSemesterTable: SemesterTable | undefined;
+  refreshDeckData: () => void;
+  decks: Deck[];
 }
 
-const SemesterCreationModal: React.FC<props> = ({
-  closeModal,
-  semesterTables,
+const FlashcardDeckCreationModal: React.FC<props> = ({
   userid,
-  refreshSemesterTables,
-  setSelectedSemester,
-  selectedSemesterTable,
+  closeModal,
+  refreshDeckData,
+  decks,
 }) => {
   const [title, setTitle] = useState<string>("");
 
@@ -33,8 +30,8 @@ const SemesterCreationModal: React.FC<props> = ({
       error = true;
     }
 
-    semesterTables.map((table) => {
-      if (title == table.table) {
+    decks.map((deck) => {
+      if (title == deck.title) {
         error = true;
         return;
       }
@@ -42,36 +39,36 @@ const SemesterCreationModal: React.FC<props> = ({
 
     if (!error)
       axios
-        .post("http://localhost:8080/semester_tables/", {
+        .post("http://localhost:8080/decks/", {
           userid: userid,
-          table: title,
+          title: title,
+          flashcards: [],
         })
         .then((res) => {
-          console.log("Successfully added new semester table:", res.data);
-          refreshSemesterTables();
-          setSelectedSemester(res.data.table);
+          console.log("Successfully added new deck:", res.data);
+          refreshDeckData();
           closeModal();
         })
         .catch((err) => {
           console.error(
-            "An error occured while trying to add a new semester table:",
-            err.message
+            "An error occured while trying to add a new deck:",
+            err.message,
           );
         });
   };
 
   return (
     <>
-      <div className="semester_creation_modal">
-        <div className="semester_creation_modal_box">
-          <div className="semester_creation_modal_box_top">
-            <h1>Add Semester</h1>
+      <div className="deck_creation_modal">
+        <div className="deck_creation_modal_box">
+          <div className="deck_creation_modal_box_top">
+            <h1>Add Deck</h1>
             <span className="material-symbols-rounded" onClick={closeModal}>
               close
             </span>
           </div>
 
-          <div className="semester_creation_modal_box_mid">
+          <div className="deck_creation_modal_box_mid">
             <input
               type="text"
               placeholder="type your title here..."
@@ -79,13 +76,13 @@ const SemesterCreationModal: React.FC<props> = ({
               onChange={(e) => setTitle(e.target.value)}
             ></input>
           </div>
-          <div className="semester_creation_modal_box_bottom">
+          <div className="deck_creation_modal_box_bottom">
             <button
               type="submit"
-              className="semester_creation_modal_create"
+              className="deck_creation_modal_create"
               onClick={(e) => handleSubmit(e)}
             >
-              Create Semester*
+              Create Deck*
             </button>
           </div>
         </div>
@@ -94,4 +91,4 @@ const SemesterCreationModal: React.FC<props> = ({
   );
 };
 
-export default SemesterCreationModal;
+export default FlashcardDeckCreationModal;

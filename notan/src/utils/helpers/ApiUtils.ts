@@ -41,6 +41,31 @@ export const fetchSemesterTables = (
     });
 };
 
+export const fetchDeckData = (
+  userid: string | undefined,
+  setDecks: (res: any) => void
+) => {
+  axios
+    .get("http://localhost:8080/decks/", {
+      params: { userid },
+    })
+    .then((res) => {
+      const modifiedDecks = res.data.map((cards: any) => ({
+        ...cards,
+        cards: [],
+      }));
+
+      setDecks(modifiedDecks);
+      console.log("Successfully pulled all decks:", modifiedDecks);
+    })
+    .catch((err) => {
+      console.error(
+        "An error occurred while trying to fetch all decks:",
+        err.message
+      );
+    });
+};
+
 export const downloadJSON = (data: any, filename: string | undefined) => {
   if (filename === undefined || data === undefined) {
     return;

@@ -26,12 +26,23 @@ import "./styles/ApplicationSession.css";
 import "./styles/PomodoroTimerPreferences.css";
 import "./styles/ToggleSwitch.css";
 import "./styles/NumberSelector.css";
+import "./styles/ApplicationFlashcards.css";
+import "./styles/FlashcardDeck.css";
+import "./styles/FlashcardsEmptyWorkspace.css";
+import "./styles/FlashcardDeckCreationModal.css";
+import "./styles/FlashcardDeckOptions.css";
+import "./styles/ApplicationFlashcardsMenu.css";
+import "./styles/FlashcardCreationModal.css";
+import "./styles/ApplicationFlashcard.css";
+import "./styles/ApplicationHelp.css";
+import "./styles/ApplicationSettings.css";
+import "./styles/ApplicationDashboard.css";
 import "./App.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );
 /*<a href="https://www.flaticon.com/free-icons/user" title="user icons">
   User icons created by Freepik - Flaticon

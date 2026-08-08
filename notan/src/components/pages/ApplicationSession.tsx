@@ -13,7 +13,16 @@ const ApplicationSession: React.FC = () => {
 
   const [volume, setVolume] = useState(50);
   const [music, setMusic] = useState(true);
-  const [notification, setNotification] = useState(true);
+  const [notification, setNotification] = useState(() => {
+    try {
+      const preferences = JSON.parse(
+        localStorage.getItem("notan-preferences") ?? "{}",
+      );
+      return preferences.playTimerSound !== false;
+    } catch {
+      return true;
+    }
+  });
   const [customTime, setCustomTime] = useState(5);
 
   const bgMusicRef = useRef<HTMLAudioElement | null>(null);

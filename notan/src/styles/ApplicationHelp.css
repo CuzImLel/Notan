@@ -1,0 +1,199 @@
+.application_help {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 32px 32px 72px;
+  overflow-y: auto;
+  scroll-padding-bottom: 72px;
+  color: var(--color-dark-text);
+}
+
+.application_help_hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px 36px;
+  color: white;
+  background: linear-gradient(125deg, #2d63b7, #5190ef);
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(60, 123, 218, 0.2);
+}
+
+.application_help_eyebrow {
+  display: inline-block;
+  margin-bottom: 9px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.application_help_hero h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+}
+
+.application_help_hero p {
+  max-width: 570px;
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.87);
+  line-height: 1.55;
+}
+
+.application_help_hero_icon {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.13);
+  font-size: 48px;
+}
+
+.application_help_section,
+.application_help_faq {
+  margin-top: 34px;
+}
+
+.application_help_section_heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.application_help_section_heading > .material-symbols-rounded {
+  padding: 9px;
+  color: var(--color-blue);
+  background: rgba(81, 144, 239, 0.12);
+  border-radius: 10px;
+}
+
+.application_help_section_heading h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.application_help_section_heading p {
+  margin: 4px 0 0;
+  color: var(--color-gray);
+  font-size: 0.92rem;
+}
+
+.application_help_steps,
+.application_help_features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.application_help_step,
+.application_help_features article {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--color-gray-borders);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 14px rgba(32, 33, 40, 0.035);
+}
+
+.application_help_step > span {
+  color: var(--color-blue);
+  font-size: 0.75rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.application_help_step h3,
+.application_help_features h3 {
+  margin: 11px 0 7px;
+  font-size: 0.98rem;
+}
+
+.application_help_step p,
+.application_help_features p,
+.application_help_faq p {
+  margin: 0;
+  color: var(--color-gray);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.application_help_features article {
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.application_help_features article:hover {
+  transform: translateY(-3px);
+  border-color: rgba(81, 144, 239, 0.55);
+  box-shadow: 0 10px 20px rgba(32, 33, 40, 0.09);
+}
+
+.application_help_features article > span {
+  color: var(--color-blue);
+  font-size: 26px;
+}
+
+.application_help_faq {
+  padding: 24px;
+  border: 1px solid var(--color-gray-borders);
+  border-radius: 16px;
+  background: var(--color-light-gray);
+}
+
+.application_help_faq details {
+  padding: 15px 0;
+  border-top: 1px solid var(--color-gray-borders);
+}
+
+.application_help_faq details:first-of-type {
+  border-top: 0;
+}
+
+.application_help_faq summary {
+  color: var(--color-dark-text);
+  font-size: 0.94rem;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.application_help_faq details p {
+  margin: 10px 24px 0;
+}
+
+@media (max-width: 1000px) {
+  .application_help_steps,
+  .application_help_features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .application_help {
+    padding: 16px;
+  }
+
+  .application_help_hero {
+    align-items: flex-start;
+    padding: 24px;
+  }
+
+  .application_help_hero_icon {
+    display: none;
+  }
+
+  .application_help_section,
+  .application_help_faq {
+    margin-top: 26px;
+  }
+
+  .application_help_steps,
+  .application_help_features {
+    grid-template-columns: 1fr;
+  }
+
+  .application_help_faq {
+    padding: 18px;
+  }
+}

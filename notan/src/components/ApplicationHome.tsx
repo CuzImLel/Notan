@@ -11,20 +11,33 @@ import { parseEventsToObjects } from "../utils/helpers/EventHandler";
 import EventCreatingModal from "./modals/EventCreatingModal";
 import { GradeCalculationPiece } from "../utils/GradeCalculationPiece";
 import { SemesterTable } from "../utils/SemesterTable";
-import { fetchEvents, fetchSemesterTables } from "../utils/helpers/ApiUtils";
+import {
+  fetchDeckData,
+  fetchEvents,
+  fetchSemesterTables,
+} from "../utils/helpers/ApiUtils";
+import { Deck } from "../utils/Deck";
 
 interface props {
   data: { _id: string; email: string; username: string } | null;
   setLogin: (login: boolean) => void;
+  setUserData: React.Dispatch<
+    React.SetStateAction<{ _id: string; email: string; username: string } | null>
+  >;
 }
 
-const ApplicationHome: React.FC<props> = ({ data, setLogin }) => {
+const ApplicationHome: React.FC<props> = ({ data, setLogin, setUserData }) => {
   const [menu, setMenu] = useState<Menu>(Menu.DASHBOARD);
   const [events, setEvents] = useState<CalendarEvent[]>([]);
   const [semesterTables, setSemesterTables] = useState<SemesterTable[]>([]);
+  const [decks, setDecks] = useState<Deck[]>([]);
 
   const refreshEvents = () => {
     fetchEvents(data?._id, setEvents);
+  };
+
+  const refreshDeckData = () => {
+    fetchDeckData(data?._id, setDecks);
   };
 
   const refreshSemesterTables = () => {
@@ -34,6 +47,7 @@ const ApplicationHome: React.FC<props> = ({ data, setLogin }) => {
   useEffect(() => {
     refreshEvents();
     refreshSemesterTables();
+    refreshDeckData();
   }, []);
 
   return (
@@ -57,10 +71,15 @@ const ApplicationHome: React.FC<props> = ({ data, setLogin }) => {
               <ApplicationWorkspace
                 menu={menu}
                 events={events}
+                decks={decks}
                 semesterTables={semesterTables}
                 refreshEventData={refreshEvents}
                 refreshSemesterTableData={refreshSemesterTables}
+                refreshDeckData={refreshDeckData}
                 userid={data._id}
+                user={data}
+                onUserUpdated={setUserData}
+                setMenu={setMenu}
               ></ApplicationWorkspace>
             </section>
           </div>

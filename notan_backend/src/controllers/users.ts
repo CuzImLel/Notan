@@ -31,18 +31,23 @@ export const deleteUser = async (
 export const updateUser = async (
   req: express.Request,
   res: express.Response
-) => {
+): Promise<void> => {
   try {
     const { id } = req.params;
     const { username } = req.body;
     if (!username) {
       res.sendStatus(400);
+      return;
     }
 
     const user = await getUserByID(id);
+    if (!user) {
+      res.sendStatus(404);
+      return;
+    }
     user.username = username;
     await user.save();
-    res.sendStatus(200).json(user).end();
+    res.status(200).json({ user });
   } catch (error) {
     console.log(error);
     res.sendStatus(400);

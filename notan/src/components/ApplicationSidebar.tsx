@@ -123,22 +123,22 @@ const ApplicationSidebar: React.FC<props> = ({
               <div>
                 <li
                   className={
-                    menu === Menu.SCHEDULE
+                    menu === Menu.FLASHCARDS
                       ? "sidebar_list_item_selected"
                       : "sidebar_list_item_unselected"
                   }
-                  onClick={() => setMenu(Menu.SCHEDULE)}
+                  onClick={() => setMenu(Menu.FLASHCARDS)}
                 >
                   <div
                     className="sidebar_item_content"
                     id={
-                      menu === Menu.SCHEDULE
+                      menu === Menu.FLASHCARDS
                         ? "sidebar_selected"
                         : "sidebar_unselected"
                     }
                   >
-                    <span className="material-symbols-rounded">event</span>
-                    <p className="sidebar_list_item_text">Schedule</p>
+                    <span className="material-symbols-rounded">note_stack</span>
+                    <p className="sidebar_list_item_text">Flashcards</p>
                   </div>
                 </li>
               </div>
@@ -209,7 +209,7 @@ const ApplicationSidebar: React.FC<props> = ({
           <div className="app_home_sidebar_bottom_section">
             <div className="app_home_sidebar_profilesection">
               <p className="app_home_sidebar_profilepic">
-                {user.username.charAt(0).toUpperCase()}
+                <span className="material-symbols-rounded">person</span>
               </p>
               <div className="app_home_sidebar_profilemetadata">
                 <p>{user.username}</p>
